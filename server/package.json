@@ -1,4 +1,16 @@
 {
+  "name": "salon-server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "build": "npm install",
+    "seed": "node seed.js"
+  },
+  "engines": {
+    "node": "18.x"
+  }
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cors": "^2.8.6",
