@@ -8,6 +8,7 @@ import {
   FiX, FiPercent, FiCalendar, FiStar, FiFilter
 } from 'react-icons/fi';
 import styles from './Home.module.css';
+import { API_URL } from '../../config';
 
 const Home = () => {
   const [categories, setCategories] = useState([]);
@@ -250,7 +251,7 @@ const Home = () => {
                     <div className={styles.category_card} onClick={() => handleCategoryClick(category.id)}>
                       <div className={styles.category_image}>
                         {category.photo ? (
-                          <img src={`http://localhost:5000/uploads/${category.photo}`} alt={category.name} />
+                          <img src={`${API_URL}/uploads/${category.photo}`} alt={category.name} />
                         ) : (
                           <div className={styles.category_image_placeholder}><FiScissors /></div>
                         )}
